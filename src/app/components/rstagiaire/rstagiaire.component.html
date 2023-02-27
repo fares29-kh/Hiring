@@ -1,0 +1,138 @@
+<div class="card">
+    <div class="card-header">Ajouter un stagiaire</div>
+  
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="le nom"
+            [(ngModel)]="stagiairelists.nomStagiaire"
+            name="id"/>
+        </div>
+  
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Prénom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="le Prenom"
+            [(ngModel)]="stagiairelists.prenomStagiaire"
+            name="prenom"
+          />
+        </div>
+  
+        <div class="form-group">
+            <label for="">Region</label>
+            <select  [(ngModel)]="stagiairelists.region" name="region" class="form-select"  aria-label="Default select example">
+              <option value="" disabled selected hidden> Rechercher Votre Region </option>
+              <option value="Monastir">Monastir</option>
+              <option value="Sousse">Sousse</option>
+              <option value="Mahdia">Mahdia</option>
+              <option value="Tunis">Tunis</option>
+              <option value="Nabeul">Nabeul</option>
+              <option value="Bizert">Bizert</option>
+              <option value="Gafsa">Gafsa</option>
+              <option value="Ariana">Ariana</option>
+            </select>
+          </div>
+  
+        <div class="form-group">
+          <label for="">Etablissement</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="l'établissement"
+            [(ngModel)]="stagiairelists.etablissement"
+            name="etablissement"
+
+            /> </div>
+        <div class="form-group">
+            <label>Départment</label>
+            <select   [(ngModel)]="stagiairelists.department"
+              name="niveau"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="" disabled selected hidden>
+                Rechercher Les Departments
+              </option>
+              <option value="inforatique">Informatique</option>
+              <option value="mecanique">Mécanique</option>
+              <option value="electrique">Electrique</option>
+              <option value="gestion">Gestion</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Niveau</label>
+            <select  [(ngModel)]="stagiairelists.niveau"
+              name="niveau"
+             
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="" disabled selected hidden>
+                Rechercher Les Niveau
+              </option>
+              <option value="Licence">Licence</option>
+              <option value="Master">Master</option>
+              <option value="Doctorat">Doctorat</option>
+              <option value="cycle">Cycle d'ingénieur</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Date début de stage</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              [(ngModel)]="stagiairelists.dateD"
+              name="datedebut"
+             
+              required
+            />
+          </div>
+
+
+
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Date fin de stage</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              [(ngModel)]="stagiairelists.dateF"
+              name="dateF"
+              
+              required
+            />
+          </div>
+
+
+
+        <div class="form-group">
+          <label for="">Votre CV</label>
+          <input
+          [(ngModel)]="stagiairelists.pdf"
+            name="pdf"
+            class="form-control"
+            type="text"
+            
+            id="myFile"/>
+        </div>
+ 
+
+  
+        <button  (click)="getStagiaireFromData()" type="button" class="btn btn-light">
+          Enregistrer
+        </button>
+      </form>
+    </div>
+  </div>

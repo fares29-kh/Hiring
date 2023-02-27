@@ -1,0 +1,119 @@
+<div class="card">
+    <div class="card-header">Ajouter un diplomé</div>
+  
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="le nom"
+            [(ngModel)]="diplomelists.nomDiplome" name="nom"/>
+        </div>
+  
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Prénom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="le Prenom"
+            [(ngModel)]="diplomelists.prenomDiplome"
+            name="prenom"
+      
+            required
+          />
+        </div>
+  
+        <div class="form-group">
+            <label for="">Region</label>
+            <select
+              name="region"
+              [(ngModel)]="diplomelists.region"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="" disabled selected hidden>
+                Rechercher Votre Region
+              </option>
+              <option value="Monastir">Monastir</option>
+              <option value="Sousse">Sousse</option>
+              <option value="Mahdia">Mahdia</option>
+              <option value="Tunis">Tunis</option>
+              <option value="Nabeul">Nabeul</option>
+              <option value="Bizert">Bizert</option>
+              <option value="Gafsa">Gafsa</option>
+              <option value="Ariana">Ariana</option>
+            </select>
+          </div>
+  
+        <div class="form-group">
+          <label for="">Etablissement</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="l'établissement"
+      
+            name="filiere.id_Filiere"
+          />
+        </div>
+        <div class="form-group">
+            <label for="">Départment</label>
+            <select
+              name="deparrment"
+              [(ngModel)]="diplomelists.department"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="" disabled selected hidden>
+                Rechercher Les Departments
+              </option>
+              <option value="inforatique">Informatique</option>
+              <option value="mecanique">Mécanique</option>
+              <option value="electrique">Electrique</option>
+              <option value="gestion">Gestion</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Statut</label>
+            <select
+              name="staut"
+              [(ngModel)]="diplomelists.statut"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="" disabled selected hidden>
+                Rechercher Les status
+              </option>
+              <option value="licenciée">licenciée</option>
+              <option value="ingénieur">ingénieur</option>
+              <option value="doctorant">doctorant </option>
+         
+            </select>
+          </div>
+
+
+
+
+        <div class="form-group">
+          <label for="">Votre CV</label>
+          <input
+          [(ngModel)]="diplomelists.cv"
+            name="cv"
+            class="form-control"
+            type="text"
+            id="myFile"
+          />
+        </div>
+ 
+
+  
+        <button  (click)="getDiplomeFromData()" type="button" class="btn btn-light">
+          Enregistrer
+        </button>
+      </form>
+    </div>
+  </div>

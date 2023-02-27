@@ -1,0 +1,91 @@
+<div class="card">
+    <div class="card-header">Ajouter une Entreprise</div>
+  
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nom de l'entreprise</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="le nom"
+            [(ngModel)]="entrepriselists.nomEntreprise" name="nomEntreprise"
+            />
+        </div>
+  
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nom de Gérant</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="le Gérant"
+            [(ngModel)]="entrepriselists.nomGerant" name="nomGerant"
+            required/>
+        </div>
+  
+        <div class="form-group">
+          <label for="">Nom de responsable HR</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="responsable HR"
+            [(ngModel)]="entrepriselists.nomHr" name="nomHr"/>
+        </div>
+
+        <div class="form-group">
+          <label for="">Region</label>
+          <select   name="region" [(ngModel)]="entrepriselists.region" class="form-select" aria-label="Default select example">
+            <option value="" disabled selected hidden>
+              Rechercher Votre Region
+            </option>
+            <option value="Monastir">Monastir</option>
+            <option value="Sousse">Sousse</option>
+            <option value="Mahdia">Mahdia</option>
+            <option value="Tunis">Tunis</option>
+            <option value="Nabeul">Nabeul</option>
+            <option value="Bizert">Bizert</option>
+            <option value="Gafsa">Gafsa</option>
+            <option value="Ariana">Ariana</option>
+          </select>
+        </div>
+          <div class="form-group">
+            <label for="">Départment</label>
+            <select   [(ngModel)]="entrepriselists.department" name="department" class="form-select" aria-label="Default select example">
+              <option value="" disabled selected hidden>
+                Rechercher Les Departments
+              </option>
+              <option value="inforatique">Informatique</option>
+              <option value="mecanique">Mécanique</option>
+              <option value="electrique">Electrique</option>
+              <option value="gestion">Gestion</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Poste à chercher </label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Poste à chercher"
+              [(ngModel)]="entrepriselists.poste"  name="poste"/>
+          </div>
+          <div class="form-group">
+            <label for="">Lien de compte linkedin</label>
+            <input
+              type="link"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="lien linkedin"
+              [(ngModel)]="entrepriselists.lien" name="lien"/>
+          </div>
+
+  
+        <button  (click)="getEntrepriseFromData()" type="button" class="btn btn-light">
+          Enregistrer
+        </button>
+      </form>
+    </div>
+  </div>

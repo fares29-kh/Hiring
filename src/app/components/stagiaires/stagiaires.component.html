@@ -1,0 +1,52 @@
+<body>
+    <div class="card">
+      <div class="card-header">Rechercher des stagiaires</div>
+  
+      <div class="card-body">
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="taper un mots-clés"/>
+        </div>
+
+      </div>
+    </div>
+  
+    <div class="card" > 
+      <div class="card-header">Liste des stagiaires</div>
+  
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nom</th>
+              <th scope="col">Prénom</th>
+              <th scope="col">Region</th>
+              <th scope="col">Etablissement</th>
+              <th scope="col">Department</th>
+              <th scope="col">Niveau</th>
+              <th scope="col">Date debut stage</th>
+              <th scope="col">date fin stage</th>
+              <th scope="col">CV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let b of stagiairelists">
+            <tr>
+              <td>{{b.nomStagiaire}}</td>
+              <td>{{b.prenomStagiare}}</td>
+              <td>{{b.etablissement}}</td>
+              <td>{{b.region}}</td>
+              <td>{{b.department}}</td>
+              <td>{{b.niveau}}</td>
+              <td>{{b.dateD}}</td>
+              <td>{{b.dateF}}</td>
+              <td>{{b.pdf}}</td>
+            </tr>
+          </ng-container>
+          </tbody>
+        </table>
+
